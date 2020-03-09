@@ -3,18 +3,15 @@
     <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-menu bottom offset-y transition="scale-transition">
-          <template v-slot:activator="{on}">
-        <v-btn color="secondary" v-on="on">Menú</v-btn>
+          <template v-slot:activator="{}">
+            <v-btn color="secondary" v-on="on">Menú</v-btn>
           </template>
-          
-        <v-list>
-        <v-list-tile
-          v-for="(item, i) in items"
-          :key="i"
-          >
-          <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
+
+          <v-list>
+            <v-list-tile v-for="(item, i) in items" :key="i">
+              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+            </v-list-tile>
+          </v-list>
         </v-menu>
       </div>
 
@@ -46,11 +43,11 @@ export default {
 
   data: () => ({
     items: [
-        { title: 'Click Me' },
-        { title: 'Click Me' },
-        { title: 'Click Me' },
-        { title: 'Click Me 2'}
-      ]
+      { title: "Click Me" },
+      { title: "Click Me" },
+      { title: "Click Me" },
+      { title: "Click Me" }
+    ]
   })
 };
 </script>
